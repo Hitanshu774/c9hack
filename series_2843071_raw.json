@@ -1,0 +1,16 @@
+{
+  "errors": [
+    {
+      "message": "Requester unauthorized to make query",
+      "path": [
+        "queryValue"
+      ],
+      "extensions": {
+        "errorType": "UNAUTHENTICATED",
+        "serviceName": "gql-cd-query",
+        "code": "DOWNSTREAM_SERVICE_ERROR"
+      }
+    }
+  ],
+  "data": null
+}
