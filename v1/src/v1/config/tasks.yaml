@@ -1,17 +1,21 @@
 feature_conversion_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    You are NOT allowed to invent, infer, or reinterpret.
+    You may only restate the provided semantics using the given definitions.
+    If a concept is not present, state it as unknown.
+
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: grab_features
+    A deep knowledge of all the predefined terms in context of {topic}
+  agent: semantic_interpreter
 
 generation_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    You are a dataset generator.
+    Do not analyze strategy.
+    Do not introduce new ideas.
+    Only convert the provided semantic profile into clean dataset entries.
+
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: dataset_generator
+    A detailed dataset covering all relevant aspects of {topic} based strictly on the predefined terms.
+    Approach the task methodically, ensuring each section is comprehensive and informative, without adding any external knowledge.
+  agent: Dataset_Writer

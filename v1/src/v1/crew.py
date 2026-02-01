@@ -15,14 +15,14 @@ class V1():
 
 #####################################################################
     @agent
-    def grab_features(self) -> Agent:
+    def semantic_interpreter(self) -> Agent:
         return Agent(
-            config=self.agents_config['grab_features'], # type: ignore[index]
+            config=self.agents_config['semantic_interpreter'], # type: ignore[index]
             verbose=True
         )
 
     @agent
-    def dataset_generator(self) -> Agent:
+    def Dataset_Writer(self) -> Agent:
         return Agent(
             config=self.agents_config['dataset_generator'], # type: ignore[index]
             verbose=True
