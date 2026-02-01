@@ -4,7 +4,7 @@ from datetime import datetime
 import pandas as pd
 import numpy as np
 
-def series_has_team(series_data: dict, team_name="NRG") -> bool:##########################################
+def series_has_team(series_data: dict, team_name="2GAME eSports") -> bool:##########################################
     team_name = team_name.lower()
 
     for game in series_data.get("seriesState", {}).get("games", []):
@@ -32,7 +32,7 @@ def get_all_nrg_series(base_dir="."):
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
-        if series_has_team(data, "NRG"):#########################################
+        if series_has_team(data, "2GAME eSports"):#########################################
             results.append({
                 "series_id": path.stem.replace("series_", "").replace("_raw", ""),
                 "time": extract_series_time(data),
@@ -49,7 +49,7 @@ def get_last_5_nrg_matches():
 
 nrg_last_5 = get_last_5_nrg_matches()
 
-print(f"Found {len(nrg_last_5)} G2 matches\n")
+print(f"Found {len(nrg_last_5)} NRG matches\n")
 
 for i, s in enumerate(nrg_last_5, 1):
     print(f"{i}. Series {s['series_id']} | Time: {s['time']}")
@@ -385,14 +385,14 @@ import pandas as pd
 df = pd.DataFrame(features)
 df
 
-df.to_csv("NRGteam_strategy_features.csv", index=False)###############################################
+df.to_csv("2GAME eSportsteam_strategy_features.csv", index=False)###############################################
 
 
 
 #########################################################################
 
 # Load your extracted features
-df = pd.read_csv("NRGteam_strategy_features.csv")
+df = pd.read_csv("2GAME eSportsteam_strategy_features.csv")#######################################################
 print("Dataset shape:", df.shape)
 print("\nColumns:", df.columns.tolist())
 print("\nFirst few rows:")
@@ -442,28 +442,30 @@ import numpy as np
 from pathlib import Path
 
 # Load your CSV
-df = pd.read_csv("NRGteam_strategy_features.csv")
+df = pd.read_csv("2GAME eSportsteam_strategy_features.csv")#################################################################
 df = df.loc[:,~df.columns.duplicated()].copy()  # Fix duplicates
 
-def create_complete_qualitative_json(df, output_file="NRG_team_averages.json"):
+def create_complete_qualitative_json(df, output_file="2GAME eSports.json"):#####################################################
     """
     Team AVERAGES ONLY - Clean strategic profile across all matches
     """
     
     # COMPLETE THRESHOLDS (unchanged)
     thresholds = {
-        'avg_round_duration': {'low': 60, 'high': 90, 'label': 'duration_style'},
-        'early_utility_rate': {'low': 0.2, 'high': 0.6, 'label': 'utility_style'},
-        'first_contact_time': {'early': 12, 'late': 20, 'label': 'contact_timing'},
-        'site_hit_freq': {'low': 0.2, 'high': 0.5, 'label': 'site_execution'},
-        'pistol_conv': {'low': 0.3, 'high': 0.7, 'label': 'pistol_efficiency'},
-        'utility_share': {'low': 0.1, 'high': 0.3, 'label': 'utility_usage'},
-        'post_plant': {'low': 0.3, 'high': 0.6, 'label': 'post_plant'},
-        'retake_rate': {'low': 0.2, 'high': 0.5, 'label': 'retake_success'},
-        'hold_rate': {'low': 0.4, 'high': 0.7, 'label': 'hold_success'},
-        'def_aggression': {'low': 0.3, 'high': 0.6, 'label': 'def_aggression'},
-        'collapse_rate': {'low': 0.2, 'high': 0.5, 'label': 'stability'}
+        # Adjusted to actual data ranges (5th/95th percentiles)
+        'avg_round_duration': {'low': 80, 'high': 110, 'label': 'duration_style'},      # 113-124 → now Balanced
+        'early_utility_rate': {'low': 0.15, 'high': 0.45, 'label': 'utility_style'},    # 0.17-0.41 → spreads out
+        'first_contact_time': {'early': 14.5, 'late': 16, 'label': 'contact_timing'},   # 15.0-15.1 → finer split
+        'site_hit_freq': {'low': 0.55, 'high': 0.75, 'label': 'site_execution'},        # 0.65-0.73 → real spread
+        'pistol_conv': {'low': 0.55, 'high': 0.95, 'label': 'pistol_efficiency'},       # 0.5-1.0 → differentiates!
+        'utility_share': {'low': 0.005, 'high': 0.015, 'label': 'utility_usage'},       # 0.003-0.01 → realistic
+        'post_plant': {'low': 0.7, 'high': 1.0, 'label': 'post_plant'},                 # 1.0 → Elite tier
+        'retake_rate': {'low': 0.35, 'high': 0.55, 'label': 'retake_success'},          # 0.39-0.51 → competitive
+        'hold_rate': {'low': 0.45, 'high': 0.65, 'label': 'hold_success'},              # 0.49-0.61 → spreads
+        'def_aggression': {'low': 0.85, 'high': 1.0, 'label': 'def_aggression'},        # 0.98-0.99 → Elite only
+        'collapse_rate': {'low': 0.25, 'high': 0.35, 'label': 'stability'}              # 0.26-0.32 → stable spread
     }
+
     
     qualitative_data = {
         "team": "NRG",
@@ -624,4 +626,6 @@ def generate_strategic_insights(profile):
 # EXECUTE - Create complete JSON with ALL features
 qual_data = create_complete_qualitative_json(df)
 
-print("NRG Strategy Analysis COMPLETE!")
+print("2GAME eSports Strategy Analysis COMPLETE!")####################################################33
+
+

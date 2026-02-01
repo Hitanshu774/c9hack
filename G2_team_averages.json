@@ -1,6 +1,6 @@
 {
-  "team": "NRG",
-  "analysis_date": "2026-02-02T03:17:52.587112",
+  "team": "G2",
+  "analysis_date": "2026-02-02T03:12:13.174200",
   "dataset_info": {
     "total_matches": 5,
     "matches_averaged": 5,
@@ -9,7 +9,7 @@
   },
   "team_averages": {
     "avg_round_duration": {
-      "avg_value": 114.981,
+      "avg_value": 114.717,
       "qualitative": "Aggressive",
       "thresholds": {
         "low": 80,
@@ -19,7 +19,7 @@
       "interpretation": "aggressive duration_style"
     },
     "early_utility_rate": {
-      "avg_value": 0.329,
+      "avg_value": 0.234,
       "qualitative": "Balanced",
       "thresholds": {
         "low": 0.15,
@@ -39,7 +39,7 @@
       "interpretation": "late contact_timing"
     },
     "site_hit_freq": {
-      "avg_value": 0.651,
+      "avg_value": 0.658,
       "qualitative": "Balanced",
       "thresholds": {
         "low": 0.55,
@@ -49,17 +49,17 @@
       "interpretation": "balanced site_execution"
     },
     "pistol_conv": {
-      "avg_value": 1.0,
-      "qualitative": "Aggressive",
+      "avg_value": 0.8,
+      "qualitative": "Balanced",
       "thresholds": {
         "low": 0.55,
         "high": 0.95,
         "label": "pistol_efficiency"
       },
-      "interpretation": "aggressive pistol_efficiency"
+      "interpretation": "balanced pistol_efficiency"
     },
     "utility_share": {
-      "avg_value": 0.007,
+      "avg_value": 0.005,
       "qualitative": "Balanced",
       "thresholds": {
         "low": 0.005,
@@ -79,7 +79,7 @@
       "interpretation": "balanced post_plant"
     },
     "retake_rate": {
-      "avg_value": 0.443,
+      "avg_value": 0.433,
       "qualitative": "Balanced",
       "thresholds": {
         "low": 0.35,
@@ -89,7 +89,7 @@
       "interpretation": "balanced retake_success"
     },
     "hold_rate": {
-      "avg_value": 0.557,
+      "avg_value": 0.567,
       "qualitative": "Balanced",
       "thresholds": {
         "low": 0.45,
@@ -99,7 +99,7 @@
       "interpretation": "balanced hold_success"
     },
     "def_aggression": {
-      "avg_value": 1.0,
+      "avg_value": 0.995,
       "qualitative": "Balanced",
       "thresholds": {
         "low": 0.85,
@@ -109,7 +109,7 @@
       "interpretation": "balanced def_aggression"
     },
     "collapse_rate": {
-      "avg_value": 0.271,
+      "avg_value": 0.289,
       "qualitative": "Balanced",
       "thresholds": {
         "low": 0.25,
@@ -120,15 +120,13 @@
     }
   },
   "strengths": [
-    "aggressive duration_style",
-    "aggressive pistol_efficiency"
+    "aggressive duration_style"
   ],
   "weaknesses": [],
   "strategic_insights": [
     "Longer rounds - control & grind style",
     "Late contact - info gathering approach",
-    "Consistent site execution across maps",
-    "Excellent pistol economy management"
+    "Consistent site execution across maps"
   ],
-  "playstyle": "Pistol Dominant"
+  "playstyle": "Calculated"
 }
