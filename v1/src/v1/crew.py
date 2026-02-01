@@ -5,6 +5,12 @@ from typing import List
 # If you want to run a snippet of code before or after the crew starts,
 # you can use the @before_kickoff and @after_kickoff decorators
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
+from crewai.tools import tool
+from tools.team_features_tool import load_semantic_state
+
+
+
+
 
 @CrewBase
 class V1():
@@ -13,6 +19,10 @@ class V1():
     agents: List[BaseAgent]
     tasks: List[Task]
 
+    @tool("load_team_semantics")
+    def load_team_semantics() -> dict:
+        """Load frozen team strategy semantics from JSON."""
+        return load_semantic_state()
 #####################################################################
     @agent
     def semantic_interpreter(self) -> Agent:
@@ -30,16 +40,17 @@ class V1():
 
 ######################################################################
     @task
-    def research_task(self) -> Task:
+    def feature_conversion_task(self) -> Task:
         return Task(
             config=self.tasks_config['research_task'], # type: ignore[index]
+            output_file='feature_understanding.md'
         )
 
     @task
-    def reporting_task(self) -> Task:
+    def generation_task(self) -> Task:
         return Task(
             config=self.tasks_config['reporting_task'], # type: ignore[index]
-            output_file='report.md'
+            output_file='dataset1.md'
         )
 
     @crew

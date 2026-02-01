@@ -19,3 +19,4 @@ generation_task:
     A detailed dataset covering all relevant aspects of {topic} based strictly on the predefined terms.
     Approach the task methodically, ensuring each section is comprehensive and informative, without adding any external knowledge.
   agent: Dataset_Writer
+  context: feature_conversion_task
