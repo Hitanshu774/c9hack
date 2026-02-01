@@ -1,42 +1,63 @@
-**Valorant Team Strategy Dataset – NRG (Last 5 Matches)**  
-
-| **Category** | **Attribute** | **Interpretation (Provided)** | **Observed Value** | **Notes / Context (derived from the provided term only)** |
-|--------------|---------------|------------------------------|--------------------|----------------------------------------------------------|
-| **General** | Team | NRG | – | The focus of the analysis. |
-|  | Scope | last_5_matches | – | Data reflects the most recent five competitive rounds. |
-|  | Dimension | team_strategy | – | All metrics relate to how the team approaches each round. |
-| **Pace & Timing** | Overall Pace | slow | The team tends to take a measured approach, preferring fewer rapid engagements. |
-|  | First‑Contact Timing | mid | Initial engagements typically occur in the middle portion of the round rather than early or late. |
-|  | Default Phase Timing | mid | The team’s default (set) positioning and movement are centred around the middle of the round. |
-|  | Mid‑Round Activity | low | After the default phase, the team shows limited activity until later phases. |
-| **Round Strength** | Late‑Round Strength | high | The team’s effectiveness and win‑rate increase significantly in the final moments of a round. |
-|  | Round Stability | moderately unstable | Performance shows some fluctuation; rounds are not consistently predictable. |
-| **Utility Usage** | Early Utility Deployment | moderate | The team applies a balanced amount of utility (smokes, flashes, etc.) early in the round. |
-|  | Utility Impact | low | Early utility does not heavily influence the outcome of the round. |
-| **Attack Execution** | Site‑Hit Frequency | high | When attacking, the team lands a large number of hits on the bomb site. |
-|  | Post‑Plant Success | high | After planting the spike, the team successfully defends the plant at a high rate. |
-|  | Pistol Conversion | high | The team is effective at converting pistol rounds into round wins. |
-| **Support & Coordination** | Trade Coordination | average | The team’s ability to trade kills is neither notably strong nor weak. |
-|  | First‑Contact Support | tight | When the first player makes contact, support from teammates is close‑by and immediate. |
-| **Defensive Playstyle** | Defensive Style | hold‑oriented | The team prefers to hold angles and positions rather than roaming. |
-|  | Defensive Aggression | high | While holding, the team engages aggressively when opponents appear. |
-| **Overall Strategic Profile** | Summary | – | NRG’s recent five‑match snapshot shows a slow‑paced, mid‑timed approach with strong late‑round performance, high site‑hit rates, and aggressive hold‑oriented defense. Early utility is used moderately but has limited impact, while trade coordination is average and pistol rounds are converted efficiently. |  
+# Valorant Team Strategy Dataset: NRG
+**Source:** `nrg_team_strategy_semantic.json`
+**Scope:** last_5_matches
 
 ---
 
-### Dataset Structure Overview  
+## Section 1: Tempo & Pacing Profile
 
-1. **Metadata** – Identifies the team, analysis scope, and strategic dimension.  
-2. **Pace & Timing** – Describes how quickly the team moves through round phases.  
-3. **Round Strength** – Captures the team’s effectiveness at different stages of a round.  
-4. **Utility Usage** – Details the amount and effect of utility deployed early in rounds.  
-5. **Attack Execution** – Highlights offensive effectiveness (site hits, post‑plant, pistol rounds).  
-6. **Support & Coordination** – Covers kill‑trading ability and support tightness on first contact.  
-7. **Defensive Playstyle** – Defines the defensive orientation and aggression level.  
-8. **Overall Strategic Profile** – Concise narrative synthesising the interpreted values.  
+This section defines the temporal flow and phase prioritization of the team's gameplay.
 
----  
+| Data Point | Value | Semantic Definition |
+| :--- | :--- | :--- |
+| **pace** | `slow` | The team prioritizes information gathering, defaults, and late-round execution. |
+| **first_contact** | `mid` | First engagement occurs after initial defaults or probing utility. |
+| **default_phase** | `mid` | Defaults are used to gather information before mid-round decisions. |
+| **late_round_strength** | `high` | The team consistently wins rounds that reach late-game scenarios. |
 
-**Prepared for:** Valorant analytics and strategic review.  
-**Prepared by:** Valorant Game Dataset Creation Specialist.  
-**Date:** 2026‑02‑01.  
+---
+
+## Section 2: Utility Usage & Site Execution
+
+This section categorizes how ability resources are managed and the team's tendencies regarding site commitment.
+
+| Data Point | Value | Semantic Definition |
+| :--- | :--- | :--- |
+| **early_utility** | `moderate` | Utility is used selectively for information or light pressure. |
+| **utility_impact** | `low` | Utility contributes minimally to damage or round outcomes. |
+| **site_hit_frequency** | `high` | The team frequently commits to site executions. |
+| **post_plant_success** | `high` | The team reliably wins post-plant scenarios. |
+
+---
+
+## Section 3: Team Coordination & Combat Mechanics
+
+This section outlines the spatial relationships between teammates and effectiveness in trading kills.
+
+| Data Point | Value | Semantic Definition |
+| :--- | :--- | :--- |
+| **trade_coordination** | `average` | Trades occur but are not always immediate. |
+| **first_contact_support** | `tight` | First contacts are regularly supported by teammates or utility. |
+| **pistol_conversion** | `high` | Pistol wins are consistently converted into follow-up rounds. |
+
+---
+
+## Section 4: Defensive Protocol
+
+This section describes the team's behavior and positioning when playing on the defensive side of the map.
+
+| Data Point | Value | Semantic Definition |
+| :--- | :--- | :--- |
+| **defensive_style** | `hold-oriented` | The team prefers anchoring sites and defending initial attacks. |
+| **defensive_aggression** | `high` | Frequent early fights, pushes, or proactive defensive plays. |
+
+---
+
+## Section 5: Stability & Round Risk
+
+This section quantifies the volatility of rounds and the level of activity during the middle phase of the round.
+
+| Data Point | Value | Semantic Definition |
+| :--- | :--- | :--- |
+| **round_stability** | `moderately unstable` | Some advantages are lost mid-round. |
+| **mid_round_activity** | `low` | Minimal proactive plays during mid-round. |
