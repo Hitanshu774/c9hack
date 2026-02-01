@@ -1,1 +1,22 @@
-{"terms":{"strategy":"overall plan to win rounds based on agent composition and map control","ecoRound":"a round where the team saves money to buy weapons in later rounds","siteTake":"the act of securing a bomb site to plant the spike","forceBuy":"purchasing weapons and utility despite limited funds to maintain aggression","mapControl":"dominating key areas of the map to limit enemy movement and information","agentSynergy":"combining abilities of different agents to create effective combos","spikePlant":"planting the spike on the bomb site to start the defuse timer","defuse":"the action of removing the spike after it has been planted","economyManagement":"strategically buying weapons and utilities based on the team's current money","rotations":"quickly moving between sites to respond to enemy threats"}}
+{
+  "team": "NRG",
+  "scope": "last_5_matches",
+  "dimension": "team_strategy",
+  "interpreted": {
+    "pace": "slow",
+    "first_contact": "mid",
+    "default_phase": "mid",
+    "late_round_strength": "high",
+    "early_utility": "moderate",
+    "utility_impact": "low",
+    "site_hit_frequency": "high",
+    "post_plant_success": "high",
+    "trade_coordination": "average",
+    "first_contact_support": "tight",
+    "pistol_conversion": "high",
+    "defensive_style": "hold-oriented",
+    "defensive_aggression": "high",
+    "round_stability": "moderately unstable",
+    "mid_round_activity": "low"
+  }
+}
