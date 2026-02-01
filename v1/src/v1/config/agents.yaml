@@ -6,143 +6,11 @@ semantic_interpreter:
   backstory: >
     You're a seasoned Specialist with a knack for understanding the predefined terms in context of {topic}. Known for your ability to find the most relevant
     information and present it in a clear and concise manner. 
-  llm: openrouter/qwen/qwen3-next-80b-a3b-instruct:free
+  llm: groq/openai/gpt-oss-120b
+  # llm: google/gemini-3-pro-preview
   temperature: 0.0
   top_p: 0.1
-  system_prompt: |
-    VALORANT Team Strategy Semantic Definitions
-
-    Use only these definitions when interpreting or generating text.
-    Do not invent new meanings or override these terms.
-
-    Tempo & Pacing
-    pace
-
-      fast: The team consistently accelerates rounds with early fights or fast site hits.
-
-      medium: The team balances early probing with structured mid-round decisions.
-
-      slow: The team prioritizes information gathering, defaults, and late-round execution.
-
-    first_contact
-
-      early: First engagement typically occurs early in the round, often during map control fights.
-
-      mid: First engagement occurs after initial defaults or probing utility.
-
-      late: First engagement occurs close to site execution or late-round scenarios.
-
-    default_phase
-
-      early: Defaults are brief; the team commits quickly after round start.
-
-      mid: Defaults are used to gather information before mid-round decisions.
-
-      late: Defaults extend deep into the round before committing.
-
-    late_round_strength
-
-      low: The team struggles to convert rounds that reach late-game situations.
-
-      moderate: Late rounds are converted inconsistently.
-
-      high: The team consistently wins rounds that reach late-game scenarios.
-
-    Utility & Execution
-    early_utility
-
-      low: Minimal utility used early; utility is conserved.
-
-      moderate: Utility is used selectively for information or light pressure.
-
-      high: Heavy early utility usage to force space or early engagements.
-
-    utility_impact
-
-      low: Utility contributes minimally to damage or round outcomes.
-
-      moderate: Utility plays a supportive role in engagements.
-
-      high: Utility significantly contributes to damage and fight outcomes.
-
-    site_hit_frequency
-
-      low: The team rarely commits to full site executions.
-
-      moderate: Site hits are used situationally.
-
-      high: The team frequently commits to site executions.
-
-    post_plant_success
-
-      low: Post-plant situations are often lost.
-
-      moderate: Post-plants are contested and inconsistently converted.
-
-      high: The team reliably wins post-plant scenarios.
-
-    Coordination & Fighting
-    trade_coordination
-
-      loose: Trades are inconsistent; players often fight alone.
-
-      average: Trades occur but are not always immediate.
-
-      tight: Players consistently trade kills and fight in pairs or groups.
-
-    first_contact_support
-
-      loose: Entry players frequently take isolated fights.
-
-      average: Support is present inconsistently.
-
-      tight: First contacts are regularly supported by teammates or utility.
-
-    pistol_conversion
-
-      low: Pistol round advantages are rarely converted.
-
-      moderate: Pistol wins are sometimes converted.
-
-      high: Pistol wins are consistently converted into follow-up rounds.
-
-    Defensive Tendencies
-    defensive_style
-
-      hold-oriented: The team prefers anchoring sites and defending initial attacks.
-
-      retake-oriented: The team frequently gives up sites to retake later.
-
-    defensive_aggression
-
-      low: Defensive players rarely contest space early.
-
-      moderate: Occasional early contests or info plays.
-
-      high: Frequent early fights, pushes, or proactive defensive plays.
-
-    Stability & Risk
-    round_stability
-
-      stable: Advantages are consistently maintained.
-
-      moderately unstable: Some advantages are lost mid-round.
-
-      volatile: Frequent collapses after gaining advantages.
-
-    mid_round_activity
-
-      low: Minimal proactive plays during mid-round.
-
-      moderate: Some mid-round adjustments or pressure.
-
-      high: Frequent mid-round aggression or proactive rotations.
-    Rules:
-    - These definitions are authoritative.
-    - Do not reinterpret labels.
-    - Do not introduce new strategic concepts.
-    - Do not invent statistics or numeric values.
-    - If a concept is not explicitly present, state "unknown".
+  
 
 
 
@@ -154,6 +22,7 @@ Dataset_Writer:
   backstory: >
     You're a meticulous Specialist with a talent for expanding topics into comprehensive sections. Known for your ability to create detailed and informative datasets that cover all relevant aspects of {topic}.
     You make use of only given information without adding any external knowledge.
-  llm: openrouter/qwen/qwen3-next-80b-a3b-instruct:free
+  llm: groq/openai/gpt-oss-120b
+  # llm: google/gemini-3-pro-preview
   temperature: 0.0
   top_p: 0.1

@@ -1,24 +1,63 @@
-**Valorant Game Dataset – Complete Entries**
+# Valorant Team Strategy Dataset: NRG
+**Source:** `nrg_team_strategy_semantic.json`
+**Scope:** last_5_matches
 
-| Term | Definition | Associated Terms (from profile) |
-|------|------------|---------------------------------|
-| **Strategy** | The overall plan to win rounds based on agent composition and map control. | Agent composition, map control |
-| **EcoRound** | A round where the team saves money to buy weapons in later rounds. | Economy, saving |
-| **SiteTake** | The act of securing a bomb site to plant the spike. | Bomb site, spike planting |
-| **ForceBuy** | Purchasing weapons and utility despite limited funds to maintain aggression. | Economy, aggression |
-| **MapControl** | Dominating key areas of the map to limit enemy movement and information. | Key areas, enemy movement, information |
-| **AgentSynergy** | Combining abilities of different agents to create effective combos. | Agent abilities, combos |
-| **SpikePlant** | Planting the spike on the bomb site to start the defuse timer. | Bomb site, defuse timer |
-| **Defuse** | The action of removing the spike after it has been planted. | SpikePlant, spike removal |
-| **EconomyManagement** | Strategically buying weapons and utilities based on the team's current money. | Money, weapon buying, utility buying |
-| **Rotations** | Quickly moving between sites to respond to enemy threats. | Site response, threat mitigation |
+---
 
-**Key Concepts Overview**
+## Section 1: Tempo & Pacing Profile
 
-- **Overall Plan**: Strategy coordinates agent composition with map control to dictate round victories.  
-- **Economic Phases**: EcoRound and ForceBuy describe money‑saving versus money‑spending tactics; EconomyManagement governs spending decisions.  
-- **Site Interaction**: SiteTake involves securing a bomb site for spike planting; SpikePlant initiates the defuse timer; Defuse removes the spike.  
-- **Control Dynamics**: MapControl dominates critical map zones, restricting enemy movement and information flow.  
-- **Team Mechanics**: AgentSynergy leverages combined agent abilities for effective combos; Rotations enable rapid site shifts to counter threats.  
+This section defines the temporal flow and phase prioritization of the team's gameplay.
 
-*All entries are derived exclusively from the provided semantic profile, using only the information explicitly listed.*
+| Data Point | Value | Semantic Definition |
+| :--- | :--- | :--- |
+| **pace** | `slow` | The team prioritizes information gathering, defaults, and late-round execution. |
+| **first_contact** | `mid` | First engagement occurs after initial defaults or probing utility. |
+| **default_phase** | `mid` | Defaults are used to gather information before mid-round decisions. |
+| **late_round_strength** | `high` | The team consistently wins rounds that reach late-game scenarios. |
+
+---
+
+## Section 2: Utility Usage & Site Execution
+
+This section categorizes how ability resources are managed and the team's tendencies regarding site commitment.
+
+| Data Point | Value | Semantic Definition |
+| :--- | :--- | :--- |
+| **early_utility** | `moderate` | Utility is used selectively for information or light pressure. |
+| **utility_impact** | `low` | Utility contributes minimally to damage or round outcomes. |
+| **site_hit_frequency** | `high` | The team frequently commits to site executions. |
+| **post_plant_success** | `high` | The team reliably wins post-plant scenarios. |
+
+---
+
+## Section 3: Team Coordination & Combat Mechanics
+
+This section outlines the spatial relationships between teammates and effectiveness in trading kills.
+
+| Data Point | Value | Semantic Definition |
+| :--- | :--- | :--- |
+| **trade_coordination** | `average` | Trades occur but are not always immediate. |
+| **first_contact_support** | `tight` | First contacts are regularly supported by teammates or utility. |
+| **pistol_conversion** | `high` | Pistol wins are consistently converted into follow-up rounds. |
+
+---
+
+## Section 4: Defensive Protocol
+
+This section describes the team's behavior and positioning when playing on the defensive side of the map.
+
+| Data Point | Value | Semantic Definition |
+| :--- | :--- | :--- |
+| **defensive_style** | `hold-oriented` | The team prefers anchoring sites and defending initial attacks. |
+| **defensive_aggression** | `high` | Frequent early fights, pushes, or proactive defensive plays. |
+
+---
+
+## Section 5: Stability & Round Risk
+
+This section quantifies the volatility of rounds and the level of activity during the middle phase of the round.
+
+| Data Point | Value | Semantic Definition |
+| :--- | :--- | :--- |
+| **round_stability** | `moderately unstable` | Some advantages are lost mid-round. |
+| **mid_round_activity** | `low` | Minimal proactive plays during mid-round. |
