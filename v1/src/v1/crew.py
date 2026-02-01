@@ -5,8 +5,29 @@ from typing import List
 # If you want to run a snippet of code before or after the crew starts,
 # you can use the @before_kickoff and @after_kickoff decorators
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
-from crewai.tools import tool
-from tools.team_features_tool import load_semantic_state
+import os
+import json
+from pathlib import Path
+from crewai.tools import BaseTool
+
+class JsonReaderTool(BaseTool):
+    name: str = "json_reader_tool"
+    description: str = "Reads a local JSON file and returns its contents"
+
+    def _run(self, file_path: str) -> str:
+        path = Path(file_path)
+
+        if not path.exists():
+            return "JSON_FILE_NOT_FOUND"
+
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception as e:
+            return f"JSON_READ_ERROR: {str(e)}"
+
+        # CrewAI requires string output
+        return json.dumps(data, indent=2)
 
 
 
@@ -18,38 +39,46 @@ class V1():
 
     agents: List[BaseAgent]
     tasks: List[Task]
-
-    @tool("load_team_semantics")
-    def load_team_semantics() -> dict:
-        """Load frozen team strategy semantics from JSON."""
-        return load_semantic_state()
 #####################################################################
     @agent
     def semantic_interpreter(self) -> Agent:
         return Agent(
             config=self.agents_config['semantic_interpreter'], # type: ignore[index]
-            verbose=True
+            tools=[JsonReaderTool()],
+            verbose=True,
+            # llm_config = {
+            #     "model": "openrouter/tngtech/tng-r1t-chimera:free",
+            #     "api_key": os.getenv("OPENROUTER_API_KEY"),
+            #     "temperature": 0.1,
+            #     "top_p" : 0.1
+            # }
         )
 
     @agent
     def Dataset_Writer(self) -> Agent:
         return Agent(
-            config=self.agents_config['dataset_generator'], # type: ignore[index]
-            verbose=True
+            config=self.agents_config['Dataset_Writer'], # type: ignore[index]
+            verbose=True,
+            # llm_config = {
+            #     "model": "openrouter/tngtech/tng-r1t-chimera:free",
+            #     "api_key": os.getenv("OPENROUTER_API_KEY"),
+            #     "temperature": 0.0,
+            #     "top_p" : 0.1
+            # }
         )
 
 ######################################################################
     @task
     def feature_conversion_task(self) -> Task:
         return Task(
-            config=self.tasks_config['research_task'], # type: ignore[index]
+            config=self.tasks_config['feature_conversion_task'], # type: ignore[index]
             output_file='feature_understanding.md'
         )
 
     @task
     def generation_task(self) -> Task:
         return Task(
-            config=self.tasks_config['reporting_task'], # type: ignore[index]
+            config=self.tasks_config['generation_task'], # type: ignore[index]
             output_file='dataset1.md'
         )
 
