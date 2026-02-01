@@ -15,16 +15,16 @@ class V1():
 
 #####################################################################
     @agent
-    def researcher(self) -> Agent:
+    def grab_features(self) -> Agent:
         return Agent(
-            config=self.agents_config['researcher'], # type: ignore[index]
+            config=self.agents_config['grab_features'], # type: ignore[index]
             verbose=True
         )
 
     @agent
-    def reporting_analyst(self) -> Agent:
+    def dataset_generator(self) -> Agent:
         return Agent(
-            config=self.agents_config['reporting_analyst'], # type: ignore[index]
+            config=self.agents_config['dataset_generator'], # type: ignore[index]
             verbose=True
         )
 
