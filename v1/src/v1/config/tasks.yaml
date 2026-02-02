@@ -8,44 +8,23 @@ feature_conversion_task:
     Use only these definitions when interpreting or generating text.
     Do not invent new meanings or override these terms.
 
-    1. **avg_round_duration** (118.8s): Average active round time (excluding 30s buy phase)
-      - Aggressive (>110s): Control/grind style, post-plant battles
-      - Balanced (80-110s): Standard execution
-      - Conservative (<80s): Fast rushes, quick resolutions
-
-    2. **early_utility_rate** (0.195): % rounds with utility usage in first 15s
-      - Measures opening aggression vs utility preservation
-
-    3. **first_contact_time** (15.0s): Average time to first damage event
-      - Late (≥14.5s): Info gathering, patient setups
-      - Early (<14.5s): High-risk immediate engagements
-
-    4. **site_hit_freq** (0.68): % attack rounds with bomb plant
-      - Elite teams: 0.70+ (consistent site execution)
-      - Balanced: 0.55-0.75 (situational plants)
-
-    5. **pistol_conv** (0.8): % pistol round wins converted to next round win
-      - Perfect (1.0): Elite economy management
-      - Elite: ≥0.8 (force buys win next pistol)
-
-    6. **utility_share** (0.006): % total damage from utility (molotovs, etc.)
-      - Weapon-focused: <0.01 (raw aim duels)
-      - Utility-dominant: >0.015 (smart fragging)
-
-    7. **post_plant** (1.0): % planted rounds won
-      - Perfect (1.0): Elite post-plant execution
-      - Vulnerable (<0.7): DEF retake specialists counter
-
-    8. **retake_rate** (0.431): % successful DEF retakes after plant
-      - vs hold_rate (0.569): Balance of retake vs site-hold success
-
-    9. **def_aggression** (1.0): % DEF rounds with damage dealt (proactive)
-      - Passive defense: Anchor sites, trade passively
-      - Aggressive defense: Proactive engagements
-
-    10. **collapse_rate** (0.294): % rounds where first-kill team loses
-        - Strong stability: <0.25 (momentum maintained)
-        - Vulnerable: >0.35 (first blood reversed)
+    "Entry Fragger": "Player with entry_attempts_per_round >72%. Leads site executes.",
+    "Duelist": "Player with duel_win_pct >52%. Primary gunfighter.",
+    "Anchor": "Player with post_plant_kd >1.15. Site defender/holder.",
+    "Flex": "Utility player. No elite specialized stats.",
+    
+    "Aggressive": "avg_entry_rate >70%. Multiple entry fraggers.",
+    "Balanced": "avg_entry_rate 60-70%. Mixed roles.",
+    "Methodical": "avg_entry_rate <60%. Lower aggression.",
+    
+    "entry_attempts_per_round": "% rounds with first damage. Aggression measure.",
+    "duel_win_pct": "Kills/(Kills+Deaths). Aim skill.",
+    "kd_site": "Kills/Deaths on planted rounds. Site holding.",
+    "dpr": "Damage Per Round. Damage output.",
+    
+    "star_entry": "Highest entry_attempts_per_round player.",
+    "strengths": "Top 2-4 standout metrics vs pro benchmarks.",
+    "avg_entry_rate": "Team average entry_attempts_per_round."
     Rules:
     - These definitions are authoritative.
     - Do not reinterpret labels.
@@ -57,18 +36,7 @@ feature_conversion_task:
     If a concept is not present, state it as unknown.
     You MUST load the predefined terms by calling the tool
     json_reader_tool and read the following json files:
-                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\2GAME eSports.json",
-                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\100 Thieves_team_averages.json",
-                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\Cloud9_team_averages.json",
-                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\Evil Geniuses_team_averages.json",
-                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\FURIA_team_averages.json",
-                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\G2_team_averages.json",
-                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\KRÜ_Esports.json",
-                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\Leviatán Esports_team_averages.json",
-                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\LOUD.json",
-                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\MIBR_team_averages.json",
-                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\NRG_team_averages.json",
-                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\Sentinels_team_averages.json"
+    C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\src\v1\pro_player_qualitative_analysis.json
 
 
     Do not proceed without calling the tool and compulsorily stick to the terms mentioned in the tool
