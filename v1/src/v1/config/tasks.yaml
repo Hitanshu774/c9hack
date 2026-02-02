@@ -8,128 +8,44 @@ feature_conversion_task:
     Use only these definitions when interpreting or generating text.
     Do not invent new meanings or override these terms.
 
-    Tempo & Pacing
-    pace
+    1. **avg_round_duration** (118.8s): Average active round time (excluding 30s buy phase)
+      - Aggressive (>110s): Control/grind style, post-plant battles
+      - Balanced (80-110s): Standard execution
+      - Conservative (<80s): Fast rushes, quick resolutions
 
-      fast: The team consistently accelerates rounds with early fights or fast site hits.
+    2. **early_utility_rate** (0.195): % rounds with utility usage in first 15s
+      - Measures opening aggression vs utility preservation
 
-      medium: The team balances early probing with structured mid-round decisions.
+    3. **first_contact_time** (15.0s): Average time to first damage event
+      - Late (≥14.5s): Info gathering, patient setups
+      - Early (<14.5s): High-risk immediate engagements
 
-      slow: The team prioritizes information gathering, defaults, and late-round execution.
+    4. **site_hit_freq** (0.68): % attack rounds with bomb plant
+      - Elite teams: 0.70+ (consistent site execution)
+      - Balanced: 0.55-0.75 (situational plants)
 
-    first_contact
+    5. **pistol_conv** (0.8): % pistol round wins converted to next round win
+      - Perfect (1.0): Elite economy management
+      - Elite: ≥0.8 (force buys win next pistol)
 
-      early: First engagement typically occurs early in the round, often during map control fights.
+    6. **utility_share** (0.006): % total damage from utility (molotovs, etc.)
+      - Weapon-focused: <0.01 (raw aim duels)
+      - Utility-dominant: >0.015 (smart fragging)
 
-      mid: First engagement occurs after initial defaults or probing utility.
+    7. **post_plant** (1.0): % planted rounds won
+      - Perfect (1.0): Elite post-plant execution
+      - Vulnerable (<0.7): DEF retake specialists counter
 
-      late: First engagement occurs close to site execution or late-round scenarios.
+    8. **retake_rate** (0.431): % successful DEF retakes after plant
+      - vs hold_rate (0.569): Balance of retake vs site-hold success
 
-    default_phase
+    9. **def_aggression** (1.0): % DEF rounds with damage dealt (proactive)
+      - Passive defense: Anchor sites, trade passively
+      - Aggressive defense: Proactive engagements
 
-      early: Defaults are brief; the team commits quickly after round start.
-
-      mid: Defaults are used to gather information before mid-round decisions.
-
-      late: Defaults extend deep into the round before committing.
-
-    late_round_strength
-
-      low: The team struggles to convert rounds that reach late-game situations.
-
-      moderate: Late rounds are converted inconsistently.
-
-      high: The team consistently wins rounds that reach late-game scenarios.
-
-    Utility & Execution
-    early_utility
-
-      low: Minimal utility used early; utility is conserved.
-
-      moderate: Utility is used selectively for information or light pressure.
-
-      high: Heavy early utility usage to force space or early engagements.
-
-    utility_impact
-
-      low: Utility contributes minimally to damage or round outcomes.
-
-      moderate: Utility plays a supportive role in engagements.
-
-      high: Utility significantly contributes to damage and fight outcomes.
-
-    site_hit_frequency
-
-      low: The team rarely commits to full site executions.
-
-      moderate: Site hits are used situationally.
-
-      high: The team frequently commits to site executions.
-
-    post_plant_success
-
-      low: Post-plant situations are often lost.
-
-      moderate: Post-plants are contested and inconsistently converted.
-
-      high: The team reliably wins post-plant scenarios.
-
-    Coordination & Fighting
-    trade_coordination
-
-      loose: Trades are inconsistent; players often fight alone.
-
-      average: Trades occur but are not always immediate.
-
-      tight: Players consistently trade kills and fight in pairs or groups.
-
-    first_contact_support
-
-      loose: Entry players frequently take isolated fights.
-
-      average: Support is present inconsistently.
-
-      tight: First contacts are regularly supported by teammates or utility.
-
-    pistol_conversion
-
-      low: Pistol round advantages are rarely converted.
-
-      moderate: Pistol wins are sometimes converted.
-
-      high: Pistol wins are consistently converted into follow-up rounds.
-
-    Defensive Tendencies
-    defensive_style
-
-      hold-oriented: The team prefers anchoring sites and defending initial attacks.
-
-      retake-oriented: The team frequently gives up sites to retake later.
-
-    defensive_aggression
-
-      low: Defensive players rarely contest space early.
-
-      moderate: Occasional early contests or info plays.
-
-      high: Frequent early fights, pushes, or proactive defensive plays.
-
-    Stability & Risk
-    round_stability
-
-      stable: Advantages are consistently maintained.
-
-      moderately unstable: Some advantages are lost mid-round.
-
-      volatile: Frequent collapses after gaining advantages.
-
-    mid_round_activity
-
-      low: Minimal proactive plays during mid-round.
-
-      moderate: Some mid-round adjustments or pressure.
-
-      high: Frequent mid-round aggression or proactive rotations.
+    10. **collapse_rate** (0.294): % rounds where first-kill team loses
+        - Strong stability: <0.25 (momentum maintained)
+        - Vulnerable: >0.35 (first blood reversed)
     Rules:
     - These definitions are authoritative.
     - Do not reinterpret labels.
@@ -140,9 +56,21 @@ feature_conversion_task:
 
     If a concept is not present, state it as unknown.
     You MUST load the predefined terms by calling the tool
-    json_reader_tool with the file path:
+    json_reader_tool and read the following json files:
+                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\2GAME eSports.json",
+                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\100 Thieves_team_averages.json",
+                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\Cloud9_team_averages.json",
+                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\Evil Geniuses_team_averages.json",
+                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\FURIA_team_averages.json",
+                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\G2_team_averages.json",
+                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\KRÜ_Esports.json",
+                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\Leviatán Esports_team_averages.json",
+                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\LOUD.json",
+                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\MIBR_team_averages.json",
+                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\NRG_team_averages.json",
+                "C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\Sentinels_team_averages.json"
 
-    C:\Users\hitan\OneDrive\Desktop\c9\c9hack\v1\src\v1\nrg_team_strategy_semantic.json
+
     Do not proceed without calling the tool and compulsorily stick to the terms mentioned in the tool
   expected_output: >
     A deep knowledge of all the predefined terms in context of {topic}
@@ -158,6 +86,7 @@ generation_task:
   expected_output: >
     A detailed dataset covering all relevant aspects of {topic} based strictly on the predefined terms.
     Approach the task methodically, ensuring each section is comprehensive and informative, without adding any external knowledge.
+    The data should be in markdown comprehensive format. Try to be more explanatory. 
     
   agent: Dataset_Writer
   context: 

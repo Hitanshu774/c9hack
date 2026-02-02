@@ -1,41 +1,136 @@
-Based on the content loaded from `nrg_team_strategy_semantic.json` for Team NRG (Scope: last_5_matches), here is the strict semantic interpretation using the mandated definitions:
+Based on the loaded team data and the authoritative semantic definitions provided, here is the complete content analysis for the Valorant teams.
 
-**Tempo & Pacing**
-*   **pace: slow**
-    *   The team prioritizes information gathering, defaults, and late-round execution.
-*   **first_contact: mid**
-    *   First engagement occurs after initial defaults or probing utility.
-*   **default_phase: mid**
-    *   Defaults are used to gather information before mid-round decisions.
-*   **late_round_strength: high**
-    *   The team consistently wins rounds that reach late-game scenarios.
+### **1. 2GAME eSports**
+*   **avg_round_duration (118.809s)**: **Aggressive** (Control/grind style, post-plant battles).
+*   **early_utility_rate (0.195)**: Measures opening aggression vs utility preservation.
+*   **first_contact_time (15.0s)**: **Late** (Info gathering, patient setups).
+*   **site_hit_freq (0.68)**: **Balanced** (Situational plants).
+*   **pistol_conv (0.8)**: **Elite** (Force buys win next pistol).
+*   **utility_share (0.006)**: **Weapon-focused** (Raw aim duels).
+*   **post_plant (1.0)**: **Perfect** (Elite post-plant execution).
+*   **retake_rate (0.431)**: Balance of retake vs site-hold success.
+*   **def_aggression (1.0)**: **Aggressive defense** (Proactive engagements).
+*   **collapse_rate (0.294)**: unknown (Falls between stability thresholds).
 
-**Utility & Execution**
-*   **early_utility: moderate**
-    *   Utility is used selectively for information or light pressure.
-*   **utility_impact: low**
-    *   Utility contributes minimally to damage or round outcomes.
-*   **site_hit_frequency: high**
-    *   The team frequently commits to site executions.
-*   **post_plant_success: high**
-    *   The team reliably wins post-plant scenarios.
+### **2. 100 Thieves**
+*   **avg_round_duration (113.397s)**: **Aggressive** (Control/grind style, post-plant battles).
+*   **early_utility_rate (0.273)**: Measures opening aggression vs utility preservation.
+*   **first_contact_time (15.0s)**: **Late** (Info gathering, patient setups).
+*   **site_hit_freq (0.693)**: **Balanced** (Situational plants).
+*   **pistol_conv (0.8)**: **Elite** (Force buys win next pistol).
+*   **utility_share (0.006)**: **Weapon-focused** (Raw aim duels).
+*   **post_plant (1.0)**: **Perfect** (Elite post-plant execution).
+*   **retake_rate (0.476)**: Balance of retake vs site-hold success.
+*   **def_aggression (0.993)**: unknown (Value present, label undefined for <1.0 but close).
+*   **collapse_rate (0.275)**: unknown.
 
-**Coordination & Fighting**
-*   **trade_coordination: average**
-    *   Trades occur but are not always immediate.
-*   **first_contact_support: tight**
-    *   First contacts are regularly supported by teammates or utility.
-*   **pistol_conversion: high**
-    *   Pistol wins are consistently converted into follow-up rounds.
+### **3. Cloud9**
+*   **avg_round_duration (119.647s)**: **Aggressive** (Control/grind style, post-plant battles).
+*   **early_utility_rate (0.405)**: Measures opening aggression vs utility preservation.
+*   **first_contact_time (15.0s)**: **Late** (Info gathering, patient setups).
+*   **site_hit_freq (0.736)**: **Elite teams** (Consistent site execution).
+*   **pistol_conv (1.0)**: **Perfect** (Elite economy management).
+*   **utility_share (0.009)**: **Weapon-focused** (Raw aim duels).
+*   **post_plant (1.0)**: **Perfect** (Elite post-plant execution).
+*   **def_aggression (0.997)**: unknown.
+*   **collapse_rate (0.296)**: unknown.
 
-**Defensive Tendencies**
-*   **defensive_style: hold-oriented**
-    *   The team prefers anchoring sites and defending initial attacks.
-*   **defensive_aggression: high**
-    *   Frequent early fights, pushes, or proactive defensive plays.
+### **4. Evil Geniuses**
+*   **avg_round_duration (120.875s)**: **Aggressive** (Control/grind style, post-plant battles).
+*   **early_utility_rate (0.361)**: Measures opening aggression vs utility preservation.
+*   **first_contact_time (15.0s)**: **Late** (Info gathering, patient setups).
+*   **site_hit_freq (0.686)**: **Balanced** (Situational plants).
+*   **pistol_conv (0.8)**: **Elite** (Force buys win next pistol).
+*   **utility_share (0.009)**: **Weapon-focused** (Raw aim duels).
+*   **post_plant (1.0)**: **Perfect** (Elite post-plant execution).
+*   **def_aggression (0.992)**: unknown.
+*   **collapse_rate (0.277)**: unknown.
 
-**Stability & Risk**
-*   **round_stability: moderately unstable**
-    *   Some advantages are lost mid-round.
-*   **mid_round_activity: low**
-    *   Minimal proactive plays during mid-round.
+### **5. FURIA**
+*   **avg_round_duration (124.407s)**: **Aggressive** (Control/grind style, post-plant battles).
+*   **early_utility_rate (0.172)**: Measures opening aggression vs utility preservation.
+*   **first_contact_time (15.083s)**: **Late** (Info gathering, patient setups).
+*   **site_hit_freq (0.677)**: **Balanced** (Situational plants).
+*   **pistol_conv (0.5)**: unknown (Below defined thresholds).
+*   **utility_share (0.003)**: **Weapon-focused** (Raw aim duels).
+*   **post_plant (1.0)**: **Perfect** (Elite post-plant execution).
+*   **def_aggression (0.99)**: unknown.
+*   **collapse_rate (0.264)**: unknown.
+
+### **6. G2**
+*   **avg_round_duration (114.717s)**: **Aggressive** (Control/grind style, post-plant battles).
+*   **early_utility_rate (0.234)**: Measures opening aggression vs utility preservation.
+*   **first_contact_time (15.0s)**: **Late** (Info gathering, patient setups).
+*   **site_hit_freq (0.658)**: **Balanced** (Situational plants).
+*   **pistol_conv (0.8)**: **Elite** (Force buys win next pistol).
+*   **utility_share (0.005)**: **Weapon-focused** (Raw aim duels).
+*   **post_plant (1.0)**: **Perfect** (Elite post-plant execution).
+*   **def_aggression (0.995)**: unknown.
+*   **collapse_rate (0.289)**: unknown.
+
+### **7. KRÜ Esports**
+*   **avg_round_duration (110.353s)**: **Aggressive** (Control/grind style, post-plant battles).
+*   **early_utility_rate (0.272)**: Measures opening aggression vs utility preservation.
+*   **first_contact_time (15.0s)**: **Late** (Info gathering, patient setups).
+*   **site_hit_freq (0.636)**: **Balanced** (Situational plants).
+*   **pistol_conv (1.0)**: **Perfect** (Elite economy management).
+*   **utility_share (0.007)**: **Weapon-focused** (Raw aim duels).
+*   **post_plant (1.0)**: **Perfect** (Elite post-plant execution).
+*   **def_aggression (0.996)**: unknown.
+*   **collapse_rate (0.316)**: unknown.
+
+### **8. Leviatán Esports**
+*   **avg_round_duration (120.382s)**: **Aggressive** (Control/grind style, post-plant battles).
+*   **early_utility_rate (0.388)**: Measures opening aggression vs utility preservation.
+*   **first_contact_time (15.0s)**: **Late** (Info gathering, patient setups).
+*   **site_hit_freq (0.713)**: **Elite teams** (Consistent site execution).
+*   **pistol_conv (1.0)**: **Perfect** (Elite economy management).
+*   **utility_share (0.009)**: **Weapon-focused** (Raw aim duels).
+*   **post_plant (1.0)**: **Perfect** (Elite post-plant execution).
+*   **def_aggression (0.992)**: unknown.
+*   **collapse_rate (0.324)**: unknown.
+
+### **9. LOUD**
+*   **avg_round_duration (117.465s)**: **Aggressive** (Control/grind style, post-plant battles).
+*   **early_utility_rate (0.41)**: Measures opening aggression vs utility preservation.
+*   **first_contact_time (15.0s)**: **Late** (Info gathering, patient setups).
+*   **site_hit_freq (0.763)**: **Elite teams** (Consistent site execution).
+*   **pistol_conv (1.0)**: **Perfect** (Elite economy management).
+*   **utility_share (0.009)**: **Weapon-focused** (Raw aim duels).
+*   **post_plant (1.0)**: **Perfect** (Elite post-plant execution).
+*   **retake_rate (0.559)**: Balance of retake vs site-hold success.
+*   **def_aggression (0.993)**: unknown.
+*   **collapse_rate (0.296)**: unknown.
+
+### **10. MIBR**
+*   **avg_round_duration (120.346s)**: **Aggressive** (Control/grind style, post-plant battles).
+*   **early_utility_rate (0.356)**: Measures opening aggression vs utility preservation.
+*   **first_contact_time (15.077s)**: **Late** (Info gathering, patient setups).
+*   **site_hit_freq (0.732)**: **Elite teams** (Consistent site execution).
+*   **pistol_conv (0.8)**: **Elite** (Force buys win next pistol).
+*   **utility_share (0.01)**: unknown (Value is not <0.01 and not >0.015).
+*   **post_plant (1.0)**: **Perfect** (Elite post-plant execution).
+*   **def_aggression (0.983)**: unknown.
+*   **collapse_rate (0.322)**: unknown.
+
+### **11. NRG**
+*   **avg_round_duration (114.981s)**: **Aggressive** (Control/grind style, post-plant battles).
+*   **early_utility_rate (0.329)**: Measures opening aggression vs utility preservation.
+*   **first_contact_time (15.0s)**: **Late** (Info gathering, patient setups).
+*   **site_hit_freq (0.651)**: **Balanced** (Situational plants).
+*   **pistol_conv (1.0)**: **Perfect** (Elite economy management).
+*   **utility_share (0.007)**: **Weapon-focused** (Raw aim duels).
+*   **post_plant (1.0)**: **Perfect** (Elite post-plant execution).
+*   **def_aggression (1.0)**: **Aggressive defense** (Proactive engagements).
+*   **collapse_rate (0.271)**: unknown.
+
+### **12. Sentinels**
+*   **avg_round_duration (120.382s)**: **Aggressive** (Control/grind style, post-plant battles).
+*   **early_utility_rate (0.388)**: Measures opening aggression vs utility preservation.
+*   **first_contact_time (15.0s)**: **Late** (Info gathering, patient setups).
+*   **site_hit_freq (0.713)**: **Elite teams** (Consistent site execution).
+*   **pistol_conv (1.0)**: **Perfect** (Elite economy management).
+*   **utility_share (0.009)**: **Weapon-focused** (Raw aim duels).
+*   **post_plant (1.0)**: **Perfect** (Elite post-plant execution).
+*   **def_aggression (0.992)**: unknown.
+*   **collapse_rate (0.324)**: unknown.

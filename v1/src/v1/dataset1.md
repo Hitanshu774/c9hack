@@ -1,63 +1,199 @@
-# Valorant Team Strategy Dataset: NRG
-**Source:** `nrg_team_strategy_semantic.json`
-**Scope:** last_5_matches
+# Valorant Team Performance Dataset
+
+**Dataset Overview**
+This dataset provides a comprehensive semantic analysis of twelve professional Valorant teams. It categorizes performance metrics into specific attributes including round duration, utility usage, contact times, site execution frequencies, economy conversion, and defensive behaviors. The data is strictly derived from the provided authoritative semantic profiles.
 
 ---
 
-## Section 1: Tempo & Pacing Profile
+## **1. 2GAME eSports**
 
-This section defines the temporal flow and phase prioritization of the team's gameplay.
-
-| Data Point | Value | Semantic Definition |
-| :--- | :--- | :--- |
-| **pace** | `slow` | The team prioritizes information gathering, defaults, and late-round execution. |
-| **first_contact** | `mid` | First engagement occurs after initial defaults or probing utility. |
-| **default_phase** | `mid` | Defaults are used to gather information before mid-round decisions. |
-| **late_round_strength** | `high` | The team consistently wins rounds that reach late-game scenarios. |
-
----
-
-## Section 2: Utility Usage & Site Execution
-
-This section categorizes how ability resources are managed and the team's tendencies regarding site commitment.
-
-| Data Point | Value | Semantic Definition |
-| :--- | :--- | :--- |
-| **early_utility** | `moderate` | Utility is used selectively for information or light pressure. |
-| **utility_impact** | `low` | Utility contributes minimally to damage or round outcomes. |
-| **site_hit_frequency** | `high` | The team frequently commits to site executions. |
-| **post_plant_success** | `high` | The team reliably wins post-plant scenarios. |
+| Metric | Numerical Value | Classification | Contextual Definition |
+| :--- | :--- | :--- | :--- |
+| **Average Round Duration** | 118.809s | **Aggressive** | Control/grind style, post-plant battles. |
+| **Early Utility Rate** | 0.195 | *N/A* | Measures opening aggression vs utility preservation. |
+| **First Contact Time** | 15.0s | **Late** | Info gathering, patient setups. |
+| **Site Hit Frequency** | 0.68 | **Balanced** | Situational plants. |
+| **Pistol Conversion** | 0.8 | **Elite** | Force buys win next pistol. |
+| **Utility Share** | 0.006 | **Weapon-focused** | Raw aim duels. |
+| **Post Plant Success** | 1.0 | **Perfect** | Elite post-plant execution. |
+| **Retake Rate** | 0.431 | *N/A* | Balance of retake vs site-hold success. |
+| **Defensive Aggression** | 1.0 | **Aggressive defense** | Proactive engagements. |
+| **Collapse Rate** | 0.294 | *Unknown* | Falls between stability thresholds. |
 
 ---
 
-## Section 3: Team Coordination & Combat Mechanics
+## **2. 100 Thieves**
 
-This section outlines the spatial relationships between teammates and effectiveness in trading kills.
-
-| Data Point | Value | Semantic Definition |
-| :--- | :--- | :--- |
-| **trade_coordination** | `average` | Trades occur but are not always immediate. |
-| **first_contact_support** | `tight` | First contacts are regularly supported by teammates or utility. |
-| **pistol_conversion** | `high` | Pistol wins are consistently converted into follow-up rounds. |
-
----
-
-## Section 4: Defensive Protocol
-
-This section describes the team's behavior and positioning when playing on the defensive side of the map.
-
-| Data Point | Value | Semantic Definition |
-| :--- | :--- | :--- |
-| **defensive_style** | `hold-oriented` | The team prefers anchoring sites and defending initial attacks. |
-| **defensive_aggression** | `high` | Frequent early fights, pushes, or proactive defensive plays. |
+| Metric | Numerical Value | Classification | Contextual Definition |
+| :--- | :--- | :--- | :--- |
+| **Average Round Duration** | 113.397s | **Aggressive** | Control/grind style, post-plant battles. |
+| **Early Utility Rate** | 0.273 | *N/A* | Measures opening aggression vs utility preservation. |
+| **First Contact Time** | 15.0s | **Late** | Info gathering, patient setups. |
+| **Site Hit Frequency** | 0.693 | **Balanced** | Situational plants. |
+| **Pistol Conversion** | 0.8 | **Elite** | Force buys win next pistol. |
+| **Utility Share** | 0.006 | **Weapon-focused** | Raw aim duels. |
+| **Post Plant Success** | 1.0 | **Perfect** | Elite post-plant execution. |
+| **Retake Rate** | 0.476 | *N/A* | Balance of retake vs site-hold success. |
+| **Defensive Aggression** | 0.993 | *Unknown* | Value present, label undefined for <1.0 but close. |
+| **Collapse Rate** | 0.275 | *Unknown* | *No definition provided.* |
 
 ---
 
-## Section 5: Stability & Round Risk
+## **3. Cloud9**
 
-This section quantifies the volatility of rounds and the level of activity during the middle phase of the round.
+| Metric | Numerical Value | Classification | Contextual Definition |
+| :--- | :--- | :--- | :--- |
+| **Average Round Duration** | 119.647s | **Aggressive** | Control/grind style, post-plant battles. |
+| **Early Utility Rate** | 0.405 | *N/A* | Measures opening aggression vs utility preservation. |
+| **First Contact Time** | 15.0s | **Late** | Info gathering, patient setups. |
+| **Site Hit Frequency** | 0.736 | **Elite teams** | Consistent site execution. |
+| **Pistol Conversion** | 1.0 | **Perfect** | Elite economy management. |
+| **Utility Share** | 0.009 | **Weapon-focused** | Raw aim duels. |
+| **Post Plant Success** | 1.0 | **Perfect** | Elite post-plant execution. |
+| **Defensive Aggression** | 0.997 | *Unknown* | *No definition provided.* |
+| **Collapse Rate** | 0.296 | *Unknown* | *No definition provided.* |
 
-| Data Point | Value | Semantic Definition |
-| :--- | :--- | :--- |
-| **round_stability** | `moderately unstable` | Some advantages are lost mid-round. |
-| **mid_round_activity** | `low` | Minimal proactive plays during mid-round. |
+---
+
+## **4. Evil Geniuses**
+
+| Metric | Numerical Value | Classification | Contextual Definition |
+| :--- | :--- | :--- | :--- |
+| **Average Round Duration** | 120.875s | **Aggressive** | Control/grind style, post-plant battles. |
+| **Early Utility Rate** | 0.361 | *N/A* | Measures opening aggression vs utility preservation. |
+| **First Contact Time** | 15.0s | **Late** | Info gathering, patient setups. |
+| **Site Hit Frequency** | 0.686 | **Balanced** | Situational plants. |
+| **Pistol Conversion** | 0.8 | **Elite** | Force buys win next pistol. |
+| **Utility Share** | 0.009 | **Weapon-focused** | Raw aim duels. |
+| **Post Plant Success** | 1.0 | **Perfect** | Elite post-plant execution. |
+| **Defensive Aggression** | 0.992 | *Unknown* | *No definition provided.* |
+| **Collapse Rate** | 0.277 | *Unknown* | *No definition provided.* |
+
+---
+
+## **5. FURIA**
+
+| Metric | Numerical Value | Classification | Contextual Definition |
+| :--- | :--- | :--- | :--- |
+| **Average Round Duration** | 124.407s | **Aggressive** | Control/grind style, post-plant battles. |
+| **Early Utility Rate** | 0.172 | *N/A* | Measures opening aggression vs utility preservation. |
+| **First Contact Time** | 15.083s | **Late** | Info gathering, patient setups. |
+| **Site Hit Frequency** | 0.677 | **Balanced** | Situational plants. |
+| **Pistol Conversion** | 0.5 | *Unknown* | Below defined thresholds. |
+| **Utility Share** | 0.003 | **Weapon-focused** | Raw aim duels. |
+| **Post Plant Success** | 1.0 | **Perfect** | Elite post-plant execution. |
+| **Defensive Aggression** | 0.99 | *Unknown* | *No definition provided.* |
+| **Collapse Rate** | 0.264 | *Unknown* | *No definition provided.* |
+
+---
+
+## **6. G2**
+
+| Metric | Numerical Value | Classification | Contextual Definition |
+| :--- | :--- | :--- | :--- |
+| **Average Round Duration** | 114.717s | **Aggressive** | Control/grind style, post-plant battles. |
+| **Early Utility Rate** | 0.234 | *N/A* | Measures opening aggression vs utility preservation. |
+| **First Contact Time** | 15.0s | **Late** | Info gathering, patient setups. |
+| **Site Hit Frequency** | 0.658 | **Balanced** | Situational plants. |
+| **Pistol Conversion** | 0.8 | **Elite** | Force buys win next pistol. |
+| **Utility Share** | 0.005 | **Weapon-focused** | Raw aim duels. |
+| **Post Plant Success** | 1.0 | **Perfect** | Elite post-plant execution. |
+| **Defensive Aggression** | 0.995 | *Unknown* | *No definition provided.* |
+| **Collapse Rate** | 0.289 | *Unknown* | *No definition provided.* |
+
+---
+
+## **7. KRÜ Esports**
+
+| Metric | Numerical Value | Classification | Contextual Definition |
+| :--- | :--- | :--- | :--- |
+| **Average Round Duration** | 110.353s | **Aggressive** | Control/grind style, post-plant battles. |
+| **Early Utility Rate** | 0.272 | *N/A* | Measures opening aggression vs utility preservation. |
+| **First Contact Time** | 15.0s | **Late** | Info gathering, patient setups. |
+| **Site Hit Frequency** | 0.636 | **Balanced** | Situational plants. |
+| **Pistol Conversion** | 1.0 | **Perfect** | Elite economy management. |
+| **Utility Share** | 0.007 | **Weapon-focused** | Raw aim duels. |
+| **Post Plant Success** | 1.0 | **Perfect** | Elite post-plant execution. |
+| **Defensive Aggression** | 0.996 | *Unknown* | *No definition provided.* |
+| **Collapse Rate** | 0.316 | *Unknown* | *No definition provided.* |
+
+---
+
+## **8. Leviatán Esports**
+
+| Metric | Numerical Value | Classification | Contextual Definition |
+| :--- | :--- | :--- | :--- |
+| **Average Round Duration** | 120.382s | **Aggressive** | Control/grind style, post-plant battles. |
+| **Early Utility Rate** | 0.388 | *N/A* | Measures opening aggression vs utility preservation. |
+| **First Contact Time** | 15.0s | **Late** | Info gathering, patient setups. |
+| **Site Hit Frequency** | 0.713 | **Elite teams** | Consistent site execution. |
+| **Pistol Conversion** | 1.0 | **Perfect** | Elite economy management. |
+| **Utility Share** | 0.009 | **Weapon-focused** | Raw aim duels. |
+| **Post Plant Success** | 1.0 | **Perfect** | Elite post-plant execution. |
+| **Defensive Aggression** | 0.992 | *Unknown* | *No definition provided.* |
+| **Collapse Rate** | 0.324 | *Unknown* | *No definition provided.* |
+
+---
+
+## **9. LOUD**
+
+| Metric | Numerical Value | Classification | Contextual Definition |
+| :--- | :--- | :--- | :--- |
+| **Average Round Duration** | 117.465s | **Aggressive** | Control/grind style, post-plant battles. |
+| **Early Utility Rate** | 0.41 | *N/A* | Measures opening aggression vs utility preservation. |
+| **First Contact Time** | 15.0s | **Late** | Info gathering, patient setups. |
+| **Site Hit Frequency** | 0.763 | **Elite teams** | Consistent site execution. |
+| **Pistol Conversion** | 1.0 | **Perfect** | Elite economy management. |
+| **Utility Share** | 0.009 | **Weapon-focused** | Raw aim duels. |
+| **Post Plant Success** | 1.0 | **Perfect** | Elite post-plant execution. |
+| **Retake Rate** | 0.559 | *N/A* | Balance of retake vs site-hold success. |
+| **Defensive Aggression** | 0.993 | *Unknown* | *No definition provided.* |
+| **Collapse Rate** | 0.296 | *Unknown* | *No definition provided.* |
+
+---
+
+## **10. MIBR**
+
+| Metric | Numerical Value | Classification | Contextual Definition |
+| :--- | :--- | :--- | :--- |
+| **Average Round Duration** | 120.346s | **Aggressive** | Control/grind style, post-plant battles. |
+| **Early Utility Rate** | 0.356 | *N/A* | Measures opening aggression vs utility preservation. |
+| **First Contact Time** | 15.077s | **Late** | Info gathering, patient setups. |
+| **Site Hit Frequency** | 0.732 | **Elite teams** | Consistent site execution. |
+| **Pistol Conversion** | 0.8 | **Elite** | Force buys win next pistol. |
+| **Utility Share** | 0.01 | *Unknown* | Value is not <0.01 and not >0.015. |
+| **Post Plant Success** | 1.0 | **Perfect** | Elite post-plant execution. |
+| **Defensive Aggression** | 0.983 | *Unknown* | *No definition provided.* |
+| **Collapse Rate** | 0.322 | *Unknown* | *No definition provided.* |
+
+---
+
+## **11. NRG**
+
+| Metric | Numerical Value | Classification | Contextual Definition |
+| :--- | :--- | :--- | :--- |
+| **Average Round Duration** | 114.981s | **Aggressive** | Control/grind style, post-plant battles. |
+| **Early Utility Rate** | 0.329 | *N/A* | Measures opening aggression vs utility preservation. |
+| **First Contact Time** | 15.0s | **Late** | Info gathering, patient setups. |
+| **Site Hit Frequency** | 0.651 | **Balanced** | Situational plants. |
+| **Pistol Conversion** | 1.0 | **Perfect** | Elite economy management. |
+| **Utility Share** | 0.007 | **Weapon-focused** | Raw aim duels. |
+| **Post Plant Success** | 1.0 | **Perfect** | Elite post-plant execution. |
+| **Defensive Aggression** | 1.0 | **Aggressive defense** | Proactive engagements. |
+| **Collapse Rate** | 0.271 | *Unknown* | *No definition provided.* |
+
+---
+
+## **12. Sentinels**
+
+| Metric | Numerical Value | Classification | Contextual Definition |
+| :--- | :--- | :--- | :--- |
+| **Average Round Duration** | 120.382s | **Aggressive** | Control/grind style, post-plant battles. |
+| **Early Utility Rate** | 0.388 | *N/A* | Measures opening aggression vs utility preservation. |
+| **First Contact Time** | 15.0s | **Late** | Info gathering, patient setups. |
+| **Site Hit Frequency** | 0.713 | **Elite teams** | Consistent site execution. |
+| **Pistol Conversion** | 1.0 | **Perfect** | Elite economy management. |
+| **Utility Share** | 0.009 | **Weapon-focused** | Raw aim duels. |
+| **Post Plant Success** | 1.0 | **Perfect** | Elite post-plant execution. |
+| **Defensive Aggression** | 0.992 | *Unknown* | *No definition provided.* |
+| **Collapse Rate** | 0.324 | *Unknown* | *No definition provided.* |
