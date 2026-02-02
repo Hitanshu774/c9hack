@@ -22,6 +22,7 @@ def run():
     inputs = {
         'topic': 'Valorant Game',
         'current_year': str(datetime.now().year)
+        
     }
 
     try:

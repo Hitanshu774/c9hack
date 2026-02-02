@@ -6,8 +6,8 @@ semantic_interpreter:
   backstory: >
     You're a seasoned Specialist with a knack for understanding the predefined terms in context of {topic}. Known for your ability to find the most relevant
     information and present it in a clear and concise manner. 
-  llm: groq/openai/gpt-oss-120b
-  # llm: google/gemini-3-pro-preview
+  # llm: groq/openai/gpt-oss-120b
+  llm: google/gemini-3-pro-preview
   temperature: 0.0
   top_p: 0.1
   
@@ -22,7 +22,7 @@ Dataset_Writer:
   backstory: >
     You're a meticulous Specialist with a talent for expanding topics into comprehensive sections. Known for your ability to create detailed and informative datasets that cover all relevant aspects of {topic}.
     You make use of only given information without adding any external knowledge.
-  llm: groq/openai/gpt-oss-120b
-  # llm: google/gemini-3-pro-preview
+  # llm: groq/openai/gpt-oss-120b
+  llm: google/gemini-3-pro-preview
   temperature: 0.0
   top_p: 0.1
