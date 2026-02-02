@@ -1,0 +1,6 @@
+player_name,agent_pick_rate,entry_attempts_per_round,deaths_first_20s,kd_by_site,duel_win_pct,headshot_pct,first_kill_rate,dmg_per_round,clutch_rate,post_plant_kd
+Ethan,0.397,0.704,0.0,0.999,0.492,0.448,0.071,98.489,1.0,0.999
+brawk,0.287,0.757,0.0,1.229,0.534,0.335,0.073,113.255,1.0,1.229
+mada,0.24,0.706,0.0,1.123,0.53,0.437,0.222,111.31,1.0,1.123
+s0m,0.323,0.701,0.0,1.067,0.514,0.517,0.09,101.424,1.0,1.067
+skuba,0.254,0.72,0.0,1.124,0.537,0.448,0.061,96.378,1.0,1.124

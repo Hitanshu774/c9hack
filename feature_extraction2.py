@@ -365,6 +365,8 @@ if __name__ == "__main__":
     print("🔥 PROFESSIONAL PLAYER EVALUATION - 15+ METRICS")
     print("=" * 70)
     
-    MY_TEAM = "G2"  # ← EDIT TEAM NAME
+    MY_TEAM = "KRÜ Esports"  # ← EDIT TEAM NAME
     
     dataset, rankings = create_pro_player_features(MY_TEAM)
+    
+

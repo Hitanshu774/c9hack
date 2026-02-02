@@ -1,0 +1,6 @@
+player_name,agent_pick_rate,entry_attempts_per_round,deaths_first_20s,kd_by_site,duel_win_pct,headshot_pct,first_kill_rate,dmg_per_round,clutch_rate,post_plant_kd
+OXY,0.28,0.729,0.0,1.365,0.567,0.5,0.201,130.479,1.0,1.365
+Xeppaa,0.342,0.748,0.0,0.964,0.504,0.42,0.078,102.907,1.0,0.964
+mitch,0.333,0.693,0.0,0.835,0.473,0.392,0.062,95.173,1.0,0.835
+neT,0.302,0.63,0.0,0.879,0.471,0.5,0.071,84.158,0.889,0.879
+v1c,0.349,0.664,0.0,1.297,0.525,0.531,0.094,96.583,0.889,1.297

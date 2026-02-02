@@ -1,0 +1,6 @@
+player_name,agent_pick_rate,entry_attempts_per_round,deaths_first_20s,kd_by_site,duel_win_pct,headshot_pct,first_kill_rate,dmg_per_round,clutch_rate,post_plant_kd
+Asuna,0.367,0.742,0.0,1.17,0.485,0.422,0.128,111.487,1.0,1.17
+Cryo,0.352,0.715,0.0,1.18,0.55,0.497,0.144,109.876,1.0,1.18
+Kess,0.191,0.51,0.0,0.663,0.354,0.403,0.051,69.432,0.778,0.663
+Zander,0.234,0.675,0.0,1.086,0.499,0.491,0.105,100.961,1.0,1.086
+eeiu,0.372,0.683,0.0,1.031,0.53,0.499,0.063,100.081,1.0,1.031
